@@ -8,24 +8,26 @@ assistant = client.beta.assistants.retrieve(
     assistant_id="asst_kmRH7iY8sxNOHbk0aGBipCHf"
 )
 
-thread = client.beta.threads.create()
 
 message_index = 1
 
-while true:
+while 1:
     msg = ""
     while msg[-2:] != "\n\n":
         s = input(">>> ")
         msg = msg + s + "\n"
         
+    thread = client.beta.threads.create(
+        messages=[
+            {
+                "role": "user",
+                "content": msg
+            }
+        ]
+    )
     run = client.beta.threads.runs.create(
         thread_id=thread.id,
         assistant_id=assistant.id
-    )
-
-    message = client.beta.threads.messages.create(
-        thread_id=thread.id,
-        content=msg
     )
 
     while run.status != "completed":
@@ -54,7 +56,8 @@ while true:
 
     for msg in client.beta.threads.messages.list(
         thread_id=thread.id
-    )
+    ):
+        print(msg.content)
 
 
 
