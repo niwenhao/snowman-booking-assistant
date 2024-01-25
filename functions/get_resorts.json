@@ -1,0 +1,4 @@
+{
+  "name": "get_resorts",
+  "description": "Get skiing resorts list. the data is composed include name, address, weather and snow depth next 7 days of the resorts"
+}

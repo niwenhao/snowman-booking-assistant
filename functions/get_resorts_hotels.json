@@ -1,0 +1,23 @@
+{
+  "name": "get_resorts",
+  "description": "Get skiing resorts list. the submit data should be a json array, the entity include name for the name of resort, addres for the address of the resort, weather for the weather of next 3 days, snow_depth for snow depth by CM of next 3 days",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "location": {
+        "type": "string",
+        "description": "The city and state e.g. San Francisco, CA"
+      },
+      "unit": {
+        "type": "string",
+        "enum": [
+          "c",
+          "f"
+        ]
+      }
+    },
+    "required": [
+      "location"
+    ]
+  }
+}
