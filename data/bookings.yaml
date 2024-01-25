@@ -1,0 +1,22 @@
+bookings:
+- bookingGuest:
+    age: 35
+    gender: Male
+    name: "\u5C71\u7530\u592A\u90CE"
+  bookingId: a3f6f1f4-c1b4-4298-9a26-48a05f2648c6
+  hotelId: 2
+  resortId: 1
+- bookingGuest:
+    age: 35
+    gender: Male
+    name: John Doe
+  bookingId: 954655e6-e7a1-47c5-b694-242a04055a65
+  hotelId: 2
+  resortId: 1
+- bookingGuest:
+    age: 35
+    gender: Male
+    name: Isohata Ichiro
+  bookingId: 3bdd44b5-dcf2-4e00-95da-e6bb6c34086e
+  hotelId: 2
+  resortId: 1

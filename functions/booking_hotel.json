@@ -1,0 +1,63 @@
+{
+  "name": "booking_hotel",
+  "description": "スキー場のホテルを予約できます。予約した結果を戻します。予約した結果は予約パラメータそのものに予約IDを付けたものになる。予約IDの項目名はbookingId。",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "resortId": {
+        "type": "integer",
+        "description": "予約対象ホテルが属しているスキー場のID"
+      },
+      "hotelId": {
+        "type": "integer",
+        "description": "予約対象ホテルのID"
+      },
+      "bookingGuest": {
+        "type": "object",
+        "description": "予約するお客様情報",
+        "properties": {
+            "name": {
+                "type": "string",
+                "description": "お客様の名前"
+            },
+            "gender": {
+                "type": "string",
+                "description": "お客様の性別、取りうる値はMaleとFemale"
+            },
+            "age": {
+                "type": "integer",
+                "description": "お客様の年齢"
+            }
+        },
+        "additionalGuest": {
+            "type": "array",
+            "description": "同行するお客様情報",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "お客様の名前"
+                    },
+                    "gender": {
+                        "type": "string",
+                        "description": "お客様の性別、取りうる値はMaleとFemale"
+                    },
+                    "age": {
+                        "type": "integer",
+                        "description": "お客様の年齢"
+                    },
+                    "relationShip": {
+                        "type": "string",
+                        "description": "予約するお客さんとの続柄"
+                    }
+                }
+            }
+        }
+      }
+    },
+    "required": [
+      "resortId"
+    ]
+  }
+}

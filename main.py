@@ -65,6 +65,13 @@ while 1:
                                 "tool_call_id": call_id,
                                 "output": output
                             })
+                        case "booking_hotel":
+                            args = json.loads(call_args)
+                            output = hotels.booking_resort_hotels(args)
+                            outputs.append({
+                                "tool_call_id": call_id,
+                                "output": output
+                            })
 
 
                 client.beta.threads.runs.submit_tool_outputs(
