@@ -39,9 +39,9 @@ while 1:
         print("run.status = {}".format(run.status))
         match run.status:
             case "queued":
-                time.sleep(3)
+                time.sleep(10)
             case "in_progress":
-                time.sleep(3)
+                time.sleep(10)
             case "failed":
                 exit()
             case "requires_action":

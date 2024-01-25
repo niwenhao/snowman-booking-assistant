@@ -20,3 +20,24 @@ bookings:
   bookingId: 3bdd44b5-dcf2-4e00-95da-e6bb6c34086e
   hotelId: 2
   resortId: 1
+- additionalGuest:
+  - age: 35
+    gender: Female
+    name: "\u5E78\u5B50"
+    relationShip: Wife
+  - age: 10
+    gender: Male
+    name: "\u535A"
+    relationShip: Son
+  - age: 8
+    gender: Female
+    name: "\u9065"
+    relationShip: Daughter
+  bookingGuest:
+    age: 45
+    gender: Male
+    name: "\u5C71\u53E3\u4E00\u90CE"
+  bookingId: 06152893-f2fa-42bf-9692-08c15421ea18
+  hotelId: 4
+  resortId: 2
+  roomType: D
