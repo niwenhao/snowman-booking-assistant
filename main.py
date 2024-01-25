@@ -1,7 +1,8 @@
 from openai import OpenAI
-from functions import resorts
+from functions import resorts, hotels
 
 import time
+import json
 
 client = OpenAI()
 
@@ -57,6 +58,15 @@ while 1:
                                 "tool_call_id": call_id,
                                 "output": resorts.get_resorts()
                             })
+                        case "get_resort_hotels":
+                            args = json.loads(call_args)
+                            output = hotels.get_resort_hotels(args['resortId'])
+                            outputs.append({
+                                "tool_call_id": call_id,
+                                "output": output
+                            })
+
+
                 client.beta.threads.runs.submit_tool_outputs(
                     thread_id=thread.id,
                     run_id=run.id,

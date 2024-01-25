@@ -1,23 +1,16 @@
 {
-  "name": "get_resorts",
-  "description": "Get skiing resorts list. the submit data should be a json array, the entity include name for the name of resort, addres for the address of the resort, weather for the weather of next 3 days, snow_depth for snow depth by CM of next 3 days",
+  "name": "get_resort_hotels",
+  "description": "スキー場のホテル一覧を取得できます。取得したのはJSONのリストです。リストに格納されるエンティティの項目は次の定義です。idはホテルのID。resortIdは属するスキー場のID。nameはホテル名。addressはホテル住所。telNoはホテルの電話番号。roomTypeは部屋タイプのリスト。部屋タイプは以下のように構成され。nameはタイプ名称。detailは部屋の詳細。",
   "parameters": {
     "type": "object",
     "properties": {
-      "location": {
-        "type": "string",
-        "description": "The city and state e.g. San Francisco, CA"
-      },
-      "unit": {
-        "type": "string",
-        "enum": [
-          "c",
-          "f"
-        ]
+      "resortId": {
+        "type": "integer",
+        "description": "取得対象ホテルが属しているスキー場のID"
       }
     },
     "required": [
-      "location"
+      "resortId"
     ]
   }
 }

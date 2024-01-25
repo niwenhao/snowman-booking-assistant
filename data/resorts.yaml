@@ -1,5 +1,6 @@
-data:
-- name: 岩原スキー場
+resorts:
+- id: 1
+  name: 岩原スキー場
   address: 〒949-6103新潟県南魚沼郡湯沢町土樽731-79
   weather:
   - Sunny
@@ -9,7 +10,8 @@ data:
   - 50
   - 45
   - 70
-- name: 蔵王温泉スキー場
+- id: 2
+  name: 蔵王温泉スキー場
   address: 〒990-2301山形県山形市蔵王温泉
   weather:
   - Snow
