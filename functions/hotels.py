@@ -15,5 +15,5 @@ def booking_resort_hotels(booking):
     booking["bookingId"] = str(uuid.uuid4())
     data["bookings"].append(booking)
     with open('data/bookings.yaml', 'w') as file:
-        yaml.dump(data, file)
+        yaml.dump(data, file, allow_unicode=True)
     return json.dumps(booking)

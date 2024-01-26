@@ -1,0 +1,60 @@
+description: スキー場のホテルを予約できます。予約した結果を戻します。予約した結果は予約パラメータそのものに予約IDを付けたものになる。予約IDの項目名はbookingId。
+name: booking_hotel
+parameters:
+  properties:
+    additionalGuest:
+      description: 同行するお客様情報
+      items:
+        properties:
+          age:
+            description: お客様の年齢
+            type: integer
+          gender:
+            description: お客様の性別、取りうる値はMaleとFemale
+            type: string
+          name:
+            description: お客様の名前
+            type: string
+          relationShip:
+            description: 予約するお客さんとの続柄
+            type: string
+        required:
+        - name
+        - gender
+        - age
+        - relationShip
+        type: object
+      type: array
+    bookingGuest:
+      description: 予約するお客様情報
+      properties:
+        age:
+          description: お客様の年齢
+          type: integer
+        gender:
+          description: お客様の性別、取りうる値はMaleとFemale
+          type: string
+        name:
+          description: お客様の名前
+          type: string
+      required:
+      - name
+      - gender
+      - age
+      type: object
+    hotelId:
+      description: 予約対象ホテルのID
+      type: integer
+    resortId:
+      description: 予約対象ホテルが属しているスキー場のID
+      type: integer
+    roomType:
+      description: 予約部屋の部屋種類
+      type: string
+  type: object
+required:
+- resortId
+- hotelId
+- bookingGuest
+- additionalGuest
+
