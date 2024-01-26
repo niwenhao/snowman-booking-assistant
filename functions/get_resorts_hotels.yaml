@@ -1,4 +1,16 @@
-description: スキー場のホテル一覧を取得できます。取得したのはJSONのリストです。リストに格納されるエンティティの項目は次の定義です。idはホテルのID。resortIdは属するスキー場のID。nameはホテル名。addressはホテル住所。telNoはホテルの電話番号。roomTypeは部屋タイプのリスト。部屋タイプは以下のように構成され。nameはタイプ名称。detailは部屋の詳細。
+description: |
+  スキー場のホテル一覧を取得できます。
+  取得したのはJSONのリストです。
+  リストに格納されるエンティティの項目は次の定義です。
+    id: ホテルのID。
+    resortId: 属するスキー場のID。
+    name: ホテル名。
+    address: ホテル住所。
+    telNo: ホテルの電話番号。
+    roomType: 部屋タイプのリスト。
+  部屋タイプは以下のように構成され。
+    name: タイプ名称。
+    detail: 部屋の詳細。
 name: get_resort_hotels
 parameters:
   properties:

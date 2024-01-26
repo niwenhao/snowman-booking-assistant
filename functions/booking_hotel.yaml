@@ -1,4 +1,8 @@
-description: スキー場のホテルを予約できます。予約した結果を戻します。予約した結果は予約パラメータそのものに予約IDを付けたものになる。予約IDの項目名はbookingId。
+description: |
+  スキー場のホテルを予約できます。
+  予約した結果を戻します。
+  予約した結果は予約パラメータそのものに予約IDを付けたものになる。
+  予約IDの項目名はbookingId。
 name: booking_hotel
 parameters:
   properties:
@@ -56,5 +60,4 @@ required:
 - resortId
 - hotelId
 - bookingGuest
-- additionalGuest
 
