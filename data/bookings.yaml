@@ -2,7 +2,7 @@ bookings:
 - bookingGuest:
     age: 35
     gender: Male
-    name: "\u5C71\u7530\u592A\u90CE"
+    name: 山田太郎
   bookingId: a3f6f1f4-c1b4-4298-9a26-48a05f2648c6
   hotelId: 2
   resortId: 1
@@ -23,21 +23,29 @@ bookings:
 - additionalGuest:
   - age: 35
     gender: Female
-    name: "\u5E78\u5B50"
+    name: 幸子
     relationShip: Wife
   - age: 10
     gender: Male
-    name: "\u535A"
+    name: 博
     relationShip: Son
   - age: 8
     gender: Female
-    name: "\u9065"
+    name: 遥
     relationShip: Daughter
   bookingGuest:
     age: 45
     gender: Male
-    name: "\u5C71\u53E3\u4E00\u90CE"
+    name: 山口一郎
   bookingId: 06152893-f2fa-42bf-9692-08c15421ea18
   hotelId: 4
   resortId: 2
   roomType: D
+- bookingGuest:
+    age: 35
+    gender: Male
+    name: 山田太郎
+  bookingId: 5c5ddb17-7468-44b9-83da-03c415535956
+  hotelId: 3
+  resortId: 2
+  roomType: BF
